@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="angular-1.5.11/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="">
+
+<label> 点击是否出现按钮: <input type="checkbox" ng-model="checked"></label><br/>
+<button ng-model="button" ng-if="checked">Button</button>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="angular-1.5.11/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="">
+
+点击复选框选择 BMW 选项:
+<input type="checkbox" ng-model="mySel">
+
+<p>我喜欢的车:</p>
+
+<select>
+    <option>Volvo</option>
+    <option ng-selected="mySel">BMW</option>
+    <option>Ford</option>
+</select>
+
+
+</body>
+</html>

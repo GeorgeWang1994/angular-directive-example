@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="angular-1.5.11/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="">
+
+我喜欢的网站
+<select ng-model="myVar">
+    <option value="google">www.google.com
+    <option value="taobao">www.taobao.com
+</select>
+
+<hr>
+<div ng-switch="myVar">
+    <div ng-switch-when="google">
+        <h1>Google</h1>
+        <p>欢迎访问Google</p>
+    </div>
+    <div ng-switch-when="taobao">
+        <h1>淘宝</h1>
+        <p>欢迎访问淘宝</p>
+    </div>
+    <div ng-switch-default>
+        <h1>切换</h1>
+        <p>选择不同选项显示对应的值。</p>
+    </div>
+</div>
+<hr>
+
+</body>
+</html>

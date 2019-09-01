@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="angular-1.5.11/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+
+<input type="text" ng-change="change(value)" ng-model="value">
+{{count}}
+<script>
+    angular.module("myApp", []).controller("myController", function ($scope) {
+        $scope.count = "";
+        $scope.change = function (newvalue) {
+            $scope.count = newvalue
+        };
+    })
+</script>
+
+</body>
+</html>

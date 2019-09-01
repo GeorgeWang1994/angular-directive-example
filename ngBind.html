@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="angular-1.5.11/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="MyController">
+    <!--  双向绑定  -->
+    <label>my name is <input type="text" ng-model="name"><span ng-bind="name"></span></label>
+</div>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("MyController", function ($scope) {
+        $scope.name = "George";
+    });
+</script>
+
+</body>
+</html>
