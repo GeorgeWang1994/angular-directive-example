@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="../angular-1.5.11/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+<script>
+    angular.module('myApp', [])
+        .controller('myController', ['$scope', function($scope) {
+            $scope.title = 'This is a title';
+        }]);
+</script>
+<div>
+    <!-- This title should be formatted normally -->
+    <h1>{{title}}</h1>
+    <!-- This title should be capitalized -->
+    <h1>{{title | uppercase}}</h1>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="../angular-1.5.11/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+<select ng-model="value">
+    <!--  根据对象中的属性倒序排放，限制只显示5个  -->
+    <option ng-repeat="v in data | orderBy:'-name' | limitTo: 5" value={{v.id}}">{{v.name}}</option>
+</select>
+<script>
+    angular.module("myApp", []).controller("myController", function ($scope) {
+        $scope.data = [
+            {'id': 1, 'name': "1"},
+            {'id': 2, 'name': "2"},
+            {'id': 3, 'name': "3"},
+            {'id': 4, 'name': "4"},
+            {'id': 5, 'name': "5"},
+            {'id': 6, 'name': "6"},
+        ]
+    })
+</script>
+</body>
+</html>

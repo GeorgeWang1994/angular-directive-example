@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="../angular-1.5.11/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+<div>
+    <input type="number" ng-model="amount" aria-label="amount"> <br>
+    默认（美元）: <span id="currency-default">{{amount | currency}}</span><br>
+    人民币: <span id="currency-custom">{{amount | currency:"¥"}}</span><br>
+    取小数点后0位: <span id="currency-no-fractions">{{amount | currency:"¥":0}}</span>
+</div>
+
+<script>
+    angular.module('myApp', [])
+        .controller('myController', ['$scope', function($scope) {
+            $scope.amount = 1234.56;
+        }]);
+</script>
+</body>
+</html>

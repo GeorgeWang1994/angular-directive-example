@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="angular-1.5.11/angular.min.js"></script>
+<script src="../angular-1.5.11/angular.min.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body ng-app="myApp" ng-controller="myController">
 
-<select>
-    <option ng-repeat="v in data">{{v.name}}</option>
-</select>
-
+<input type="text" ng-change="change(value)" ng-model="value">
+{{count}}
 <script>
     angular.module("myApp", []).controller("myController", function ($scope) {
-        $scope.data = [
-            {'id': 1, 'name': "1"},
-            {'id': 2, 'name': "2"},
-        ]
+        $scope.count = "";
+        $scope.change = function (newvalue) {
+            $scope.count = newvalue
+        };
     })
 </script>
 
